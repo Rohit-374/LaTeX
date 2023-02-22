@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+
+% Define the old coordinate system
+\draw[->] (0,0) -- (2,0) node[right] {$X$};
+\draw[->] (0,0) -- (0,2) node[above] {$Y$};
+
+% Define the vector
+\draw[->, crd] (0,0) -- (1.5,1) node[above right] {$\vec{r}$};
+
+% Define the projection on the old coordinate system axes
+\draw[dashed] (1.5,0) -- (1.5,1);
+\draw[dashed] (0,1) -- (1.5,1);
+
+% Define the new coordinate system
+\draw[->,blue,rotate=20] (0,0) -- (2,0) node[right] {$X'$};
+\draw[->,blue,rotate=20] (0,0) -- (0,2) node[above] {$Y'$};
+
+% Define the projection on the new coordinate system axes
+\draw[dashed,blue,rotate=20] (1.7515590745,0,0) -- (1.7515590745,0,0|-0,0.426662405797);
+\draw[dashed,blue,rotate=20] (0,0.426662405797) -- (0,0.426662405797-|1.7515590745,0);
+
+% Draw the arc showing the rotation
+\draw[-latex] (1,0) arc (0:20:1) node[midway,right]{$\theta$};
+\draw[-latex] (0.69,0) arc (0:33.690067526:0.69) node[midway,right]{$\alpha$};
+
+\end{tikzpicture}
